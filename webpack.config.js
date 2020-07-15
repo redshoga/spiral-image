@@ -1,12 +1,12 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   // production の場合、最適化された状態で出力される
   // development の場合、ソースマップが有効でJSファイルが出力される
-  mode: 'development',
+  mode: "development",
 
   // エントリーポイント
-  entry: './src/main.ts',
+  entry: "./src/main.ts",
 
   module: {
     rules: [
@@ -14,15 +14,13 @@ module.exports = {
         // 拡張子 .ts の場合
         test: /\.ts$/,
         // TypeScript をコンパイルする
-        use: "ts-loader"
-      }
-    ]
+        use: "ts-loader",
+      },
+    ],
   },
   // import 文で .ts ファイルを解決する
   resolve: {
-    modules: [
-      "node_modules"
-    ],
-    extensions: [".ts", ".js"]
-  }
+    modules: ["node_modules"],
+    extensions: [".ts", ".js"],
+  },
 };
